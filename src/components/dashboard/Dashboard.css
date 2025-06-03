@@ -1,0 +1,189 @@
+.app-dashboard-container {
+  position: relative; /* Required for absolute positioning of ::before */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: black; /* Change text color for better visibility */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 0;
+  z-index: 1; /* Ensures text stays above the background */
+}
+
+.app-dashboard-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: scale(1);
+  z-index: -1; /* Keeps background behind the text */
+  background-color: #292929;
+}
+
+.app-api-card-container {
+  width: 95%;
+  height: 100%;
+  /* background-color: red;   */
+  display: flex;
+  justify-content: center;
+}
+
+.app-api-card-side-panel {
+  width: 5%;
+  background-color: rgb(50, 50, 50);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  height: 96%;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-api-card-side-panel-containers {
+  width: 90%;
+  margin: 5%;
+  cursor: pointer;
+  height: 10%;
+  border-radius: 10px;
+}
+
+.app-api-card-side-panel-containers img {
+  width: 50%;
+}
+
+.icon-button {
+  display: inline-flex; /* allows alignment similar to a button, especially if there's an icon */
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out, filter 1s ease-in-out;
+  user-select: none;
+}
+
+.icon-button:hover {
+  /* background-color: rgb(90, 90, 90); */
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); */
+  filter: brightness(0.9);
+}
+
+.icon-button:active {
+  /* background-color: rgb(50, 50, 50);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2) inset; */
+  filter: brightness(0.7);
+}
+
+.graph-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.7s ease-in-out;
+}
+
+.graph-container.full {
+  width: 100%;
+}
+
+.graph-container.shrink {
+  width: 50%;
+}
+
+.api-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: width 0.7s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.api-container.hide {
+  width: 0%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.api-container.expand {
+  width: 48%;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.app-api-buttons {
+  width: 94.5%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: pink; */
+}
+
+.app-button {
+  /* margin-left: 1%;
+  margin-right: 1%; */
+  width: 15%;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 10px;
+  font-size: 80%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 0px;
+  cursor: pointer;
+  font-weight: 100;
+  transition: transform 1s ease-in-out, filter 1s ease-in-out;
+}
+
+.app-button:hover {
+  background-color: rgb(25, 25, 25);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.9);
+}
+
+.app-button:active {
+  background-color: rgb(50, 50, 50);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2) inset;
+  filter: brightness(0.7);
+}
+
+.app-button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInSlide 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.disabled {
+  /* pointer-events: none; disables click, hover, etc. */
+  opacity: 0.5 !important; /* optional: make it look disabled */
+  cursor: not-allowed !important; /* optional: show disabled cursor */
+  /* cursor:progress; */
+}
+
+.disabled:hover{
+  filter: brightness(1) !important;
+}

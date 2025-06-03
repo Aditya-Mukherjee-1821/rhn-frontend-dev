@@ -1,0 +1,37 @@
+.node-image-parent{
+  position: relative;
+}
+
+.graph-node {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+  top: -20%;
+  left: -20%;
+}
+
+/* Hover effect */
+.graph-node:hover {
+  transform: scale(1.2);
+}
+
+/* Source/Heater: largest size and highest z-index */
+.graph-node.source {
+  width: 200px;
+  height: 200px;
+  z-index: 3;
+}
+
+/* Sink/User (e.g., flats): medium size and medium z-index */
+.graph-node.sink {
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+/* Junction: smallest and lowest z-index */
+.graph-node.junction {
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}

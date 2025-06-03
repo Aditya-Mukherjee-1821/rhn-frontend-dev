@@ -1,0 +1,50 @@
+.app-source-container {
+  position: relative; /* Required for absolute positioning of ::before */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: black; /* Change text color for better visibility */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 0;
+  z-index: 1; /* Ensures text stays above the background */
+}
+
+.app-source-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  transform: scale(1);
+  z-index: -1; /* Keeps background behind the text */
+}
+
+.app-source-body {
+  width: 40%;
+  margin: 5%;
+}
+
+#app-source-header-heading-1 {
+  display: block;
+  text-align: left;
+  font-size: 200%;
+}
+
+#app-source-header-heading-4 {
+  color: rgb(48, 48, 48);
+  font-weight: 100;
+  text-align: left;
+}
+
+.app-source-api-card-container{
+  width: 50%;
+  height: 100%;
+}

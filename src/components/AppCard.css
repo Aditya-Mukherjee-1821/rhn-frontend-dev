@@ -1,0 +1,56 @@
+.app-card {
+    width: 20%;
+    height: 40%;
+    background-color: white;
+    padding: 0.5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Grow effect on hover */
+  .app-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Remove underline and inherit text color */
+  .app-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  /* Change transparency on click */
+  .card-text-header:active {
+    opacity: 0.6;
+  }
+  
+  /* Optional: Reset color on hover */
+  .app-card a:hover {
+    color: inherit;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .card-text-header {
+    text-align: left;
+    font-size: 100%;
+    font-weight: 400;
+    color: inherit;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-text-body {
+    text-align: left;
+    font-size: 50%;
+    font-weight: 200;
+    color: rgb(48, 48, 48);
+  }
+  

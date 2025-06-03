@@ -1,0 +1,45 @@
+.base-line {
+  stroke-width: 3;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.flow-line {
+  stroke-width: 2;
+  stroke-dasharray: 4, 2;
+  animation: flow 0.5s linear infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Supply lines (Red) */
+.supply.base-line {
+  stroke: #e57373;
+}
+.supply.flow-line {
+  stroke: #d32f2f;
+  animation-direction: normal;
+}
+
+/* Return lines (Blue) */
+.return.base-line {
+  stroke: #64b5f6;
+}
+.return.flow-line {
+  stroke: #1976d2;
+  animation-direction: normal; /* Change this to 'normal' */
+}
+
+@keyframes flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -14;
+  }
+}
+
+/* For reverse direction, add specific handling */
+.return.flow-line.reverse {
+  animation-direction: reverse; /* This will apply the reverse animation */
+}

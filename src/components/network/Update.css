@@ -1,0 +1,178 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 70vw;
+  height: 70vh;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  animation: modal-appear 0.3s ease-out;
+  overflow: hidden; /* Prevent modal overflow */
+}
+
+.modal-scroll-body {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px; /* spacing above buttons */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@keyframes modal-appear {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.edit-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  table-layout: fixed;
+}
+
+.edit-table th,
+.edit-table td {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.edit-table input {
+  width: 100%;
+  padding: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.edit-table th {
+  font-weight: 500; /* lighter than default bold */
+  background-color: #f7f7f7;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.edit-table td {
+  font-weight: 300; /* visually distinguish rows */
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* make width 100% and height 5% as important for edit-done class */
+.edit-done {
+  width: 100% !important;
+  padding: 4% !important;
+}
+
+.input-table-data {
+  height: 2.2em;
+  width: 100%;
+  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.input-table-data:hover {
+  cursor:auto;
+  background-color: #f1f1f1;
+  border-color: #999;
+}
+
+.input-table-data:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.search-button{
+    padding: 0.4% !important;
+    width: 30%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+

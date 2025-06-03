@@ -1,0 +1,71 @@
+.source-api-form-add-source {
+  background-color: white;
+  margin: 5%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Normal shadow */
+}
+
+.source-api-form-header-add-source {
+  font-size: 150%;
+  padding: 2%;
+  font-weight: 100;
+}
+
+.sink-api-form-subheader-add-source {
+  font-size: 60%;
+  padding: 0;
+  font-weight: 100;
+  color: rgb(113, 113, 113);
+}
+
+.source-api-form-input-add-source {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.source-api-form-input-add-source input {
+  font-size: 60%;
+  width: 90%;
+  margin: 1%;
+  border-radius: 10px;
+  border: 1px solid rgb(185, 185, 185);
+  padding: 2%;
+  font-weight: 100;
+}
+
+.source-api-form-add-source input:focus {
+  outline: none;
+  border: none; /* Optional: Remove border if needed */
+  box-shadow: none; /* Optional: Remove any shadow */
+  border: 1px solid rgb(185, 185, 185);
+}
+
+.add-sink-button {
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 10px;
+  font-size: 80%;
+  background-color: rgb(113, 113, 113);
+  color: white;
+  border: 0px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, filter 0.2s;
+  font-weight: 100;
+}
+
+.source-api-form-add-source button:hover {
+  background-color: rgb(100, 100, 100);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
+}
+
+.source-api-form-add-source button:active {
+  background-color: rgb(80, 80, 80);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2) inset;
+  filter: brightness(0.9);
+}
